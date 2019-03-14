@@ -14,9 +14,10 @@ module Math.Polynomial.Pretty () where
 import Math.Polynomial.Type
 
 import Data.Complex
+import Data.Monoid ((<>))
 
-import Text.PrettyPrint
-import Text.PrettyPrint.HughesPJClass
+import Text.PrettyPrint hiding ((<>))
+import Text.PrettyPrint.HughesPJClass hiding ((<>))
 
 instance (Pretty a, Num a, Ord a) => Pretty (Poly a) where
     pPrintPrec l p x = ppr
